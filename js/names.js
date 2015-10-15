@@ -29,3 +29,8 @@
       you add a new person object to the array
  */
 
+document.addEventListener('DOMContentLoaded', function() {
+    'use strict';
+
+
+}
