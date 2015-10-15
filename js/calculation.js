@@ -53,5 +53,20 @@
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
 
-    
-}
+    var equalsButton = document.getElementById('equals-button');
+    equalsButton.addEventListener('click', function() {
+        var value1 = document.getElementById("value-1").value;
+        var value2 = document.getElementById("value-2").value;
+        value1 = parseFloat(value1);
+        value2 = parseFloat(value2);
+        var result = document.getElementById("result").textContent = value1+value2;
+
+        var alert = document.getElementById("error-message");
+        if (isNaN(result)) {
+            alert.textContent = "Only input numbers";
+            alert.style.display = 'block';
+        } else {
+            alert.style.display = 'none';
+        };
+    });
+});
